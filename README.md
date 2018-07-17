@@ -20,7 +20,7 @@ o = {
 }
 
 # deklarujemy obiekt dvp.PrettyPrint`
-pp = dvp.PrettyPrint(tab=2, head=3, tail=2, max_str_len=50)
+pp = dvp.PrettyPrint(tab=2, head=3, tail=2, max_str_len=50, show_line=True, filename=__file__)
 
 # obiekt jest wywoływalny
 # w ten sposób wypisze na standardowe wyjście obiekt o
@@ -28,6 +28,7 @@ pp(o, var='zmienna')
 ```
 *wynik:*
 ```
+C:\Users\Daniel\GitHub\dvik-print\run_tests.py:32
 zmienna = {
   u'krotka': (
     u'oto',

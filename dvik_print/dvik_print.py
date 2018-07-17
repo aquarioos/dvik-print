@@ -1,15 +1,26 @@
 # -*- coding: utf8 -*-
 from __future__ import division, absolute_import, print_function, unicode_literals
 
+import inspect
+import os
+
 
 class PrettyPrint(object):
-    def __init__(self, tab=4, head=2, tail=1, max_str_len=100):
+    def __init__(self, tab=4, head=2, tail=1, max_str_len=100, filename=None, show_line=False):
         self.tab = tab
         self.head = head
         self.tail = tail
         self.max_str_len = max(10, max_str_len)
+        self.filename = os.path.abspath(filename)
+        if show_line and self.filename is None:
+            raise ValueError('if show_line then filename cannot be None')
+        self.show_line = show_line
 
     def __call__(self, obj, var=None):
+        if self.show_line:
+            if self.filename is None:
+                raise ValueError('if show_line then filename cannot be None')
+            print('{}:{}'.format(self.filename, inspect.currentframe().f_back.f_lineno))
         if var is None:
             pref = ''
         else:
