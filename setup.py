@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dvik-print',
-    version='0.2',
+    version='0.3',
     description='Funkcja ładnie wypisująca obiekty z możliwością ustawienia wielkości wcięć i limitu pokazywanych kluczy/elementów.',
     url='https://github.com/aquarioos/dvik-print',
     author='Daniel Taranta',

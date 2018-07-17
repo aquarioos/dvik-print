@@ -1,6 +1,16 @@
 # dvik-print
 Funkcja ładnie wypisująca obiekty z możliwością ustawienia wielkości wcięć i limitu pokazywanych kluczy/elementów.
 
+## Instalacja
+
+Instalacja pakietu z GitHuba:
+
+```pip install git+https://github.com/aquarioos/dvik-print/#egg=dvik-print```
+
+Aktualizacja pakietu:
+
+```pip install git+https://github.com/aquarioos/dvik-print/#egg=dvik-print -U```
+
 ## Użycie
 
 ```python
